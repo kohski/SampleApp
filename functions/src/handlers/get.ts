@@ -16,6 +16,6 @@ export const handler = async (event: Event): Promise<LambdaResponse> => {
   const todoItem = await getTodoById(todoId)
   return {
     statusCode: 200,
-    body: todoItem
+    body: JSON.stringify(todoItem)
   }
 }
